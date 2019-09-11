@@ -14,26 +14,37 @@
     gap: 10px 20px;
 
     /* add your code above this line */
+    grid-template-areas: 
+        "header header  header"
+        "nav    main    main"
+        "ad     .    ."
+        "footer footer  footer"
   }
 
 .d1{
     background:LightSkyBlue;
-    justify-self: center;
-    align-self: center;
+    /* justify-self: center;
+    align-self: center; */
+    grid-area: header;
 }
 .d2{
     background:LightSalmon;
-    justify-self: start;
+    /* justify-self: start; */
+    grid-area: nav;
 }
 .d3{
     background:PaleTurquoise;
-    align-self: end;
+    /* align-self: end; */
+    grid-area: main;
 }
-.d4{background:LightPink;}
+.d4{
+    background:LightPink;
+    grid-area: ad;
+}
 .d5{
     background:PaleGreen;
-    grid-column: 2 / 4;
-    grid-row: 3 / 5;
+    grid-area: footer;
+
 }
 
 div.mr-red {
@@ -44,6 +55,17 @@ div.mr-red {
 div.mr-blue {
     background-color: blue;
     z-index: 1;
+}
+
+@media (min-width: 600px) {
+    .container {
+        grid-template-areas: 
+        "header header  header"
+        "nav    main    main"
+        "ad     main    main"
+        "ad footer  footer"
+    }
+
 }
 
 
