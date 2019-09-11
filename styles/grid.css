@@ -4,8 +4,15 @@
     background: LightGray;
     /* add your code below this line */
     display: grid;
-    grid-template-columns: 100px 100px 100px;
+    /* grid-template-columns: 100px 100px 100px; */
+    grid-template-columns: 1fr 100px 2fr;
     grid-template-rows: 50px 75px 100px 125px;
+
+    /* grid-column-gap: 20px;
+    grid-row-gap: 10px; */
+    /* NOT grid-gap which is depreceated!! */
+    gap: 10px 20px;
+
     /* add your code above this line */
   }
 
