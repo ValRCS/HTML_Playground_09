@@ -16,9 +16,34 @@
     /* add your code above this line */
   }
 
-.d1{background:LightSkyBlue;}
-.d2{background:LightSalmon;}
-.d3{background:PaleTurquoise;}
+.d1{
+    background:LightSkyBlue;
+    justify-self: center;
+    align-self: center;
+}
+.d2{
+    background:LightSalmon;
+    justify-self: start;
+}
+.d3{
+    background:PaleTurquoise;
+    align-self: end;
+}
 .d4{background:LightPink;}
-.d5{background:PaleGreen;}
+.d5{
+    background:PaleGreen;
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+}
+
+div.mr-red {
+    background-color: red;
+    z-index: 2;
+}
+
+div.mr-blue {
+    background-color: blue;
+    z-index: 1;
+}
+
 
