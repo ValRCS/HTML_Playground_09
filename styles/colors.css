@@ -34,10 +34,12 @@ div:hover {
 
 .d3 {
     background-color: rgb(73, 31, 112);
+    clip-path: circle(30px);
 }
 
 .d4 {
     background-color: hsl(34, 78%, 91%);
+    clip-path: inset(10px 20px 30px 40px);
 }
 
 .d5 {
