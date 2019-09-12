@@ -1,8 +1,17 @@
-body {
-    /* background: rgba(0, 0, 0, 0.1); */
-    background-image: url('../img/back.jpg');
+/* body {
+
+    background-image: linear-gradient(45deg, hsla(0, 26%, 49%, 0.527) ,
+         green,
+         orange,
+        rgba(214, 214, 27, 0.781));
     background-size: 250px 250px;
     opacity: 0.4;
+} */
+
+main {
+    background-image:
+  linear-gradient(to bottom, rgba(255,255,0,0.3), rgba(0,0,255,0.3)),
+  url('https://mdn.mozillademos.org/files/7693/catfront.png');
 }
 div {
     width: 100px;
