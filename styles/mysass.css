@@ -22,11 +22,7 @@ html {
       grid-template-columns: auto;
   -ms-grid-rows: 100px 125px 1fr 50px 50px;
       grid-template-rows: 100px 125px 1fr 50px 50px;
-      grid-template-areas: "myheader"
- "mymenu"
- "mycontent"
- "myad"
- "myfooter";
+      grid-template-areas: "myheader" "mymenu" "mycontent" "myad" "myfooter";
 }
 
 @media (min-width: 576px) {
@@ -35,9 +31,7 @@ html {
         grid-template-columns: 100px 1fr 125px;
     -ms-grid-rows: 45px 1fr 50px;
         grid-template-rows: 45px 1fr 50px;
-        grid-template-areas: "myheader   myheader    myheader"
- "mymenu     mycontent   myad"
- "myfooter   myfooter    myfooter";
+        grid-template-areas: "myheader   myheader    myheader" "mymenu     mycontent   myad" "myfooter   myfooter    myfooter";
   }
 }
 
@@ -56,9 +50,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .mymenu {
@@ -150,5 +144,54 @@ html {
   color: white;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
 /*# sourceMappingURL=mysass.css.map */
