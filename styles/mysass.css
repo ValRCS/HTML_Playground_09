@@ -119,6 +119,7 @@ html {
   height: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  border-radius: 5px;
 }
 
 /* Style the front side (fallback if image is missing) */
