@@ -22,7 +22,23 @@ html {
       grid-template-columns: auto;
   -ms-grid-rows: 100px 125px 1fr 50px 50px;
       grid-template-rows: 100px 125px 1fr 50px 50px;
-      grid-template-areas: "myheader" "mymenu" "mycontent" "myad" "myfooter";
+      grid-template-areas: "myheader"
+ "mymenu"
+ "mycontent"
+ "myad"
+ "myfooter";
+}
+
+@media (min-width: 576px) {
+  .mycontainer {
+    -ms-grid-columns: 100px 1fr 125px;
+        grid-template-columns: 100px 1fr 125px;
+    -ms-grid-rows: 45px 1fr 50px;
+        grid-template-rows: 45px 1fr 50px;
+        grid-template-areas: "myheader   myheader    myheader"
+ "mymenu     mycontent   myad"
+ "myfooter   myfooter    myfooter";
+  }
 }
 
 .myheader {
@@ -134,15 +150,5 @@ html {
   color: white;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-}
-
-@media (min-width: 576px) {
-  .mycontainer {
-    -ms-grid-columns: 100px 1fr 125px;
-        grid-template-columns: 100px 1fr 125px;
-    -ms-grid-rows: 45px 1fr 50px;
-        grid-template-rows: 45px 1fr 50px;
-        grid-template-areas: "myheader   myheader    myheader" "mymenu     mycontent   myad" "myfooter   myfooter    myfooter";
-  }
 }
 /*# sourceMappingURL=mysass.css.map */
