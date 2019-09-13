@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.mycontainer {
+  display: -ms-grid;
+  display: grid;
+  height: 95vh;
+  margin: auto;
+  width: 90%;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 100px 125px 1fr 50px 50px;
+      grid-template-rows: 100px 125px 1fr 50px 50px;
+      grid-template-areas: "myheader" "mymenu" "mycontent" "myad" "myfooter";
+}
+
+.myheader {
+  background-color: lightblue;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: myheader;
+}
+
+.myheader .header-ul li {
+  display: inline;
+}
+
+.myheader nav.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.mymenu {
+  background-color: red;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: mymenu;
+}
+
+.mycontent {
+  background-color: lightgoldenrodyellow;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: mycontent;
+}
+
+.myad {
+  background-color: fuchsia;
+  width: 100%;
+  /* height: 50px; */
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: myad;
+  /* height: 200px; */
+}
+
+.ad-img {
+  width: 50px;
+  height: 50px;
+}
+
+.myfooter {
+  background-color: lightskyblue;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: myfooter;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+@media (min-width: 576px) {
+  .mycontainer {
+    -ms-grid-columns: 100px 1fr 125px;
+        grid-template-columns: 100px 1fr 125px;
+    -ms-grid-rows: 45px 1fr 50px;
+        grid-template-rows: 45px 1fr 50px;
+        grid-template-areas: "myheader   myheader    myheader" "mymenu     mycontent   myad" "myfooter   myfooter    myfooter";
+  }
+}
+/*# sourceMappingURL=mysass.css.map */
