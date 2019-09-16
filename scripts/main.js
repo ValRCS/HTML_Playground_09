@@ -1,3 +1,24 @@
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    // Your code below this line
+    var result = "My " + myAdjective;
+    result += " ";
+    result += myNoun;
+    result += " ";
+    result += myVerb;
+    result += " ";
+    result += myAdverb;
+    result += ".";
+  
+    var quickresult = "My " + myAdjective + " " + myNoun + " "
+          + myVerb + " " + myAdverb + ".";
+    // Your code above this line
+   return result;
+    // return "My " + myAdjective + " " + myNoun + " "
+          + myVerb + " " + myAdverb + ".";
+  //   return `My ${myAdjective} ${myNoun} ${myVerb} ${myAdverb}.`;
+  
+  }
+
 console.log("Going to alert something");
 // we use Ctrl-/ to comment and uncomment
 // alert("Hello RCS!");
@@ -16,4 +37,4 @@ myDiv.innerText = "MyVariables:" + a + " : " + b + " : " + c;
 var myName = "Valdis";
 var myStr = "My name is " + myName + " and I am well!";
 
-myDiv.innerText = myStr;
+myDiv.innerText = wordBlanks( "cat", "heavy", "chased", "mice");
