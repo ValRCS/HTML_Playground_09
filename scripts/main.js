@@ -19,6 +19,12 @@ function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
   
   }
 
+function nextInLine(arr, item) {
+      // Your code here
+      arr.push(item);
+      return arr.shift();  // Change this line
+}
+
 function main() {
       console.log("Going to alert something");
       // we use Ctrl-/ to comment and uncomment
