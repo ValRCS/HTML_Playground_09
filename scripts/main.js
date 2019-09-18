@@ -1,3 +1,9 @@
+var gObj = {
+      "hat": "ballcap",
+      "shirt": "jersey",
+      "shoes": "cleats"
+    };
+
 function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
     // Your code below this line
     var result = "My " + myAdjective;
@@ -27,6 +33,7 @@ function nextInLine(arr, item) {
 
 function main() {
       console.log("Going to alert something");
+      console.log("Checking out my global object", gObj.hat);
       // we use Ctrl-/ to comment and uncomment
       // alert("Hello RCS!");
       // console.log("I have alerted, lets finish this");
