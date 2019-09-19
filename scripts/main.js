@@ -1,12 +1,24 @@
-var gObj = {
+const gObj = {
       "hat": "ballcap",
       "shirt": "jersey",
       "shoes": "cleats"
     };
 
+const myStorage = {
+      "car": {
+        "inside": {
+          "glove box": "maps",
+          "passenger seat": "crumbs"
+         },
+        "outside": {
+          "trunk": "jack"
+        }
+      }
+    };
+
 function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
     // Your code below this line
-    var result = "My " + myAdjective;
+    let result = "My " + myAdjective;
     result += " ";
     result += myNoun;
     result += " ";
@@ -15,7 +27,7 @@ function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
     result += myAdverb;
     result += ".";
   
-    var quickresult = "My " + myAdjective + " " + myNoun + " "
+    let quickresult = "My " + myAdjective + " " + myNoun + " "
           + myVerb + " " + myAdverb + ".";
     // Your code above this line
    return result;
@@ -31,9 +43,23 @@ function nextInLine(arr, item) {
       return arr.shift();  // Change this line
 }
 
+function loopTest() {
+      for (var i = 0; i < 4; i++ ) {
+            console.log('i',i);
+      }
+      console.log("i is alive !!",i);
+      for (let j = 0; j < 4; j++) {
+            console.log('j',j);
+      }
+      // console.log("j is dead baby!",j);
+}
+
 function main() {
+      loopTest();
       console.log("Going to alert something");
       console.log("Checking out my global object", gObj.hat);
+      console.log("My map", myStorage.car.inside["glove box"])
+
       // we use Ctrl-/ to comment and uncomment
       // alert("Hello RCS!");
       // console.log("I have alerted, lets finish this");
