@@ -83,10 +83,11 @@ function createChildren(selector) {
     }
 }
 
-function createPlainChild(selector, tag, text) {
+function createPlainChild(selector, tag, text, className = "my-text") {
     const parent = document.querySelector(selector);
     const newElement = document.createElement(tag);
     newElement.innerText = text;
+    newElement.classList.add(className);
     parent.appendChild(newElement);
 }
 
@@ -99,18 +100,24 @@ function deleteAllChildren(selector) {
 }
 
 //Event Handlers
-function onAddButtonClick() {
+function onAddButtonClick(event) {
     console.log("An Add button was clicked!");
+    console.log("Target id is " + event.target.id);
+    createPlainChild("#app-1", "p", "Lorem");
     // alert('You Clicked me!');
 }
 
 function onDeleteButtonClick() {
     console.log("A Delete button was clicked!");
+    const myel = document.querySelector("#app-1");
+    myel.removeChild(myel.lastChild);
     // alert('You Clicked me!');
 }
 
 function onResetButtonClick() {
     console.log("Reset Button was clicked!");
+    deleteAllChildren("#app-1");
+    createChildren("#app-1");
 }
 
 function onUpdateButtonClick() {
