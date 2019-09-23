@@ -9,7 +9,7 @@ function main() {
     const myApp = styleMainParent('#app-1', CFG);
 
     createChildren("#app-1");
-    createPlainChild("body", "footer");
+    createPlainChild("body", "footer", "(C)2019");
     // setTimeout(deleteAllChildren, 5000, "#app-1");
     //if we want to delete immediately deleteAllChildren("#app-1");
 }
@@ -39,9 +39,10 @@ function createChildren(selector) {
     }
 }
 
-function createPlainChild(selector, tag) {
+function createPlainChild(selector, tag, text) {
     const parent = document.querySelector(selector);
     const newElement = document.createElement(tag);
+    newElement.innerText = text;
     parent.appendChild(newElement);
 }
 
