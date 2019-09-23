@@ -16,6 +16,17 @@ function main() {
     //adding Event Handlers
     const myDeleteBtn = document.querySelector("#delete-btn");
     myDeleteBtn.onclick = onDeleteButtonClick;
+
+    document.querySelector("#reset-btn").onclick = onResetButtonClick;
+    //arrow syntax example on adding handler underneath
+    document.querySelector('#random-btn').onclick = () => {console.log("Random!");};
+
+    const myUpdateBtn = document.querySelector("#update-btn");
+    //addEventListener for adding multple function callbacks
+    myUpdateBtn.addEventListener('click', () => {console.log("Updating!");});
+    myUpdateBtn.addEventListener('click', onUpdateButtonClick);
+    myUpdateBtn.addEventListener('click', onResetButtonClick);
+
 }
 
 function styleMainParent(selector, mystyle) {
@@ -71,6 +82,10 @@ function onDeleteButtonClick() {
 
 function onResetButtonClick() {
     console.log("Reset Button was clicked!");
+}
+
+function onUpdateButtonClick() {
+    console.log("Handling Update..");
 }
 
 
