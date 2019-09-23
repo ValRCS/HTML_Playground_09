@@ -25,6 +25,21 @@ function main() {
         event.target.innerText = "R"+Math.floor(Math.random()*100);
     };
 
+    document.querySelector("#app-1").onclick = (event) => {
+        console.log("You clicked my app div"+event.target.id);
+    }
+
+    document.querySelector("#p-2").onclick = (event) => {
+        console.log("You clicked paragraph "+event.target.id);
+    }
+
+    //example on how to stop bubbling up!
+    document.querySelector("#p-3").onclick = (event) => {
+        console.log("You clicked paragraph "+event.target.id);
+        console.log("Stoping bubbling Propagation toward parent");
+        event.stopPropagation();
+    }
+
     const myUpdateBtn = document.querySelector("#update-btn");
     //addEventListener for adding multple function callbacks
     myUpdateBtn.addEventListener('click', () => {console.log("Updating!");});
@@ -36,10 +51,11 @@ function main() {
         console.log("Keycode is: "+event.key);
     }
 
-    document.querySelector("#app-1").onmousemove = (event) => {
-        console.log("Mouse X: "+ event.clientX);
-        console.log("Mouse Y: "+ event.clientY);
-    }
+    //how to handle mouse move events
+    // document.querySelector("#app-1").onmousemove = (event) => {
+    //     console.log("Mouse X: "+ event.clientX);
+    //     console.log("Mouse Y: "+ event.clientY);
+    // }
 }
 
 function styleMainParent(selector, mystyle) {
