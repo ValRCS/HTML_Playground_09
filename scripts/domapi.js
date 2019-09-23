@@ -19,7 +19,11 @@ function main() {
 
     document.querySelector("#reset-btn").onclick = onResetButtonClick;
     //arrow syntax example on adding handler underneath
-    document.querySelector('#random-btn').onclick = () => {console.log("Random!");};
+    // event.target gets me the element responsible for firing the event
+    document.querySelector('#random-btn').onclick = (event) => {
+        console.log("Random!");
+        event.target.innerText = "R"+Math.floor(Math.random()*100);
+    };
 
     const myUpdateBtn = document.querySelector("#update-btn");
     //addEventListener for adding multple function callbacks
@@ -32,7 +36,7 @@ function main() {
         console.log("Keycode is: "+event.key);
     }
 
-    document.onmousemove = (event) => {
+    document.querySelector("#app-1").onmousemove = (event) => {
         console.log("Mouse X: "+ event.clientX);
         console.log("Mouse Y: "+ event.clientY);
     }
