@@ -27,6 +27,15 @@ function main() {
     myUpdateBtn.addEventListener('click', onUpdateButtonClick);
     myUpdateBtn.addEventListener('click', onResetButtonClick);
 
+    document.onkeydown = (event) => {
+        console.log("You pressed key: "+ event.code);
+        console.log("Keycode is: "+event.key);
+    }
+
+    document.onmousemove = (event) => {
+        console.log("Mouse X: "+ event.clientX);
+        console.log("Mouse Y: "+ event.clientY);
+    }
 }
 
 function styleMainParent(selector, mystyle) {
