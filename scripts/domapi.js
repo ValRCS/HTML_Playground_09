@@ -12,6 +12,10 @@ function main() {
     createPlainChild("body", "footer", "(C)2019");
     // setTimeout(deleteAllChildren, 5000, "#app-1");
     //if we want to delete immediately deleteAllChildren("#app-1");
+
+    //adding Event Handlers
+    const myDeleteBtn = document.querySelector("#delete-btn");
+    myDeleteBtn.onclick = onDeleteButtonClick;
 }
 
 function styleMainParent(selector, mystyle) {
@@ -55,10 +59,20 @@ function deleteAllChildren(selector) {
 }
 
 //Event Handlers
-function onButtonClick() {
-    console.log("A button was clicked!");
+function onAddButtonClick() {
+    console.log("An Add button was clicked!");
     // alert('You Clicked me!');
 }
+
+function onDeleteButtonClick() {
+    console.log("A Delete button was clicked!");
+    // alert('You Clicked me!');
+}
+
+function onResetButtonClick() {
+    console.log("Reset Button was clicked!");
+}
+
 
 main();
 
