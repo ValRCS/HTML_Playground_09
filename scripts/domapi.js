@@ -54,6 +54,11 @@ function deleteAllChildren(selector) {
     console.log("All children should be gone!");
 }
 
+//Event Handlers
+function onButtonClick() {
+    console.log("A button was clicked!");
+    // alert('You Clicked me!');
+}
 
 main();
 
