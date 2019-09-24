@@ -79,6 +79,31 @@ function main() {
         vs(".inp3").value = parseFloat(vs(".inp1").value) +parseFloat(vs(".inp2").value);
 
     }
+
+    // onchange only fires on when you commmit to change(mouseup or finger up)
+    document.querySelector('#range1').onchange = (ev) => {
+        addRanges();
+    }
+
+    // oninput fires on each little change 
+    document.querySelector('#range2').oninput = (ev) => {
+        addRanges();
+    }
+
+
+    init();
+}
+
+function init() {
+    addRanges();
+}
+
+function addRanges() {
+    const v1 = parseFloat(document.querySelector('#range1').value);
+    const v2 = parseFloat(document.querySelector('#range2').value);
+    console.log("Range values are:", v1, v2, v1+v2);
+
+    document.querySelector('#res1').innerText = "Result is: " + (v1+v2);
 }
 
 //helper function (think mega simple $ in jQuery)
