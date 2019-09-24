@@ -16,6 +16,8 @@ function main() {
     $("#b2").prop("disabled", true);
     $("#b1").prop("disabled", false);
     
+    $("p").remove();
+    
 }
 
 
