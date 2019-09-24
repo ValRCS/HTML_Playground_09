@@ -56,6 +56,34 @@ function main() {
     //     console.log("Mouse X: "+ event.clientX);
     //     console.log("Mouse Y: "+ event.clientY);
     // }
+
+    const mySubmitBtn = document.querySelector(".btn-submit");
+    mySubmitBtn.onclick = (event) => {
+        // const inp1 = document.querySelector(".inp1");
+        // const val1 = parseFloat(inp1.value);
+        // console.log("Value is:"+val1);
+        // const inp2 = document.querySelector(".inp2");
+        // const val2 = parseFloat(inp2.value);
+        // console.log("Value is:"+val2);
+        // const inp3 = document.querySelector(".inp3");
+        // const val3 = val1 + val2;
+        // console.log("Val3 should be:"+ val3);
+        // inp3.value = val1 + val2;
+
+        //above in one in one line below
+
+        // document.querySelector(".inp3").value = parseFloat(document.querySelector(".inp1").value) +
+        //         parseFloat(document.querySelector(".inp2").value); 
+
+        //same one line as above except we use our own helper function
+        vs(".inp3").value = parseFloat(vs(".inp1").value) +parseFloat(vs(".inp2").value);
+
+    }
+}
+
+//helper function (think mega simple $ in jQuery)
+function vs(selector) {
+    return document.querySelector(selector);
 }
 
 function styleMainParent(selector, mystyle) {
