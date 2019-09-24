@@ -10,6 +10,12 @@ function main() {
     $("h1").css("background-color", "green");
     $(".my-txt").css("background-color", "aqua");
     
+    $("p").removeClass("my-txt");
+    $("p").css("color", "brown");
+
+    $("#b2").prop("disabled", true);
+    $("#b1").prop("disabled", false);
+    
 }
 
 
