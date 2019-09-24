@@ -46,10 +46,10 @@ function main() {
     myUpdateBtn.addEventListener('click', onUpdateButtonClick);
     myUpdateBtn.addEventListener('click', onResetButtonClick);
 
-    document.onkeydown = (event) => {
-        console.log("You pressed key: "+ event.code);
-        console.log("Keycode is: "+event.key);
-    }
+    // document.onkeydown = (event) => {
+    //     console.log("You pressed key: "+ event.code);
+    //     console.log("Keycode is: "+event.key);
+    // }
 
     //how to handle mouse move events
     // document.querySelector("#app-1").onmousemove = (event) => {
