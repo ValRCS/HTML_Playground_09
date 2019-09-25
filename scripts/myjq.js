@@ -5,6 +5,9 @@ $(document).ready(main);
 //document.addEventListener('DOMContentLoaded', main, false);
 //but jQuery also supports older browsers with onload etc handlers
 
+
+
+
 function main() {
     console.log("Running Main!");
     $("h1").css("background-color", "green");
@@ -16,8 +19,18 @@ function main() {
     $("#b2").prop("disabled", true);
     $("#b1").prop("disabled", false);
     
-    $("p").remove();
+    // $("p").remove();
+    $("p").after("<p> more text </p>");
+    $("p").after("<p> Even more text </p>");
     
+    //add listeners to buttons
+    $(".my-btn").click(function(event) {
+        console.log("My ID is" + $(this).attr('id'));
+
+        //we could use standard Javasript DOM api to get id
+        console.log("Target is: "+ event.target.id);
+
+        console.log("Testing this", this.id);
+    });
+
 }
-
-
