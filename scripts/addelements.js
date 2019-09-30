@@ -13,11 +13,20 @@ function main() {
     //add elements
         const mainCont = document.querySelector("#main-cont-1");
         for (let i = 0; i < inputField.value ; i++) {
-            addElement(mainCont, "p", {
-                content: "Lorem",
-                id: "el-"+i,
-                myClasses: ['red-txt', 'my-txt']      
-            })
+            //Simple example of adding an element inlinw without addElement function
+            const newEl = document.createElement('p');
+            newEl.id = "my-id-"+ (i+1);
+            newEl.classList.add("my-class"); //we might need different classes *hint*
+            //you can see how without parenthesis the innerText is not quite what we wanted :)
+            //JS converts txt with number into text 
+            newEl.innerText = "Lorem " + i + 1;
+            mainCont.appendChild(newEl);
+            // Full Example on how to add new element with properties
+            // addElement(mainCont, "p", {
+            //     content: "Lorem",
+            //     id: "el-"+i,
+            //     myClasses: ['red-txt', 'my-txt']      
+            // })
         }
     }
 
@@ -26,7 +35,6 @@ function main() {
     delBtn.onclick = function (event) {
         deleteAllElements(document.querySelector("#main-cont-1"));
     }
-
 }
 
 
