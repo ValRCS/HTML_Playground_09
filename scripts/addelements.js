@@ -1,27 +1,34 @@
 console.log("Will add some elements on demand");
+main();
 
-const addBtn = document.querySelector(".addelements");
-addBtn.onclick = (event) => {
+
+function main() {
+    const addBtn = document.querySelector(".addelements");
+
+    addBtn.onclick = (event) => {
     console.log("You clicked on Add button");
     const inputField = document.querySelector("#el-count-1");
     console.log("Going to add this many elements: "+ inputField.value);
 
     //add elements
-    const mainCont = document.querySelector("#main-cont-1");
-    for (let i = 0; i < inputField.value ; i++) {
-        addElement(mainCont, "p", {
-            content: "Lorem",
-            id: "el-"+i,
-            myClasses: ['red-txt', 'my-txt']      
-     })
+        const mainCont = document.querySelector("#main-cont-1");
+        for (let i = 0; i < inputField.value ; i++) {
+            addElement(mainCont, "p", {
+                content: "Lorem",
+                id: "el-"+i,
+                myClasses: ['red-txt', 'my-txt']      
+            })
+        }
     }
+
+    const delBtn = document.querySelector(".del-elements");
+    //main difference between regular function and arrows is the scope of this
+    delBtn.onclick = function (event) {
+        deleteAllElements(document.querySelector("#main-cont-1"));
+    }
+
 }
 
-const delBtn = document.querySelector(".del-elements");
-//main difference between regular function and arrows is the scope of this
-delBtn.onclick = function (event) {
-    deleteAllElements(document.querySelector("#main-cont-1"));
-}
 
 function addElement(parent, tag, props) {
     console.log("Adding a new element");
